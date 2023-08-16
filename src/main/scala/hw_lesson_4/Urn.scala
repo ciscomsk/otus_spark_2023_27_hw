@@ -30,6 +30,10 @@ case class Urn(balls: IndexedSeq[Ball]) {
 }
 
 object Urn {
+  /**
+    можно проще - shuffle
+    https://www.scala-lang.org/api/2.13.11/scala/util/Random$.html#shuffle[T,C](xs:IterableOnce[T])(implicitbf:scala.collection.BuildFrom[xs.type,T,C]):C
+   */
   def fillUrn(number: Int = 6, limit: Int = 3): IndexedSeq[Ball] = {
     val rnd: Random = new Random()
 
